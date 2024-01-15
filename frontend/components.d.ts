@@ -7,11 +7,10 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ElButton: typeof import('element-plus/es')['ElButton']
     ElIcon: typeof import('element-plus/es')['ElIcon']
-    ElRow: typeof import('element-plus/es')['ElRow']
     Header: typeof import('./src/components/Header.vue')['default']
     IEpArrowDown: typeof import('~icons/ep/arrow-down')['default']
+    IEpChromeFilled: typeof import('~icons/ep/chrome-filled')['default']
     IEpClose: typeof import('~icons/ep/close')['default']
     IEpFullScreen: typeof import('~icons/ep/full-screen')['default']
     IEpMinus: typeof import('~icons/ep/minus')['default']

@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import {WindowHide, WindowMinimise ,WindowToggleMaximise,Quit } from '../../wailsjs/runtime'
 import { reactive, ref } from 'vue'
-import { GetAppName } from '../../wailsjs/go/backend/MainApp'
+import { GetAppName } from '../../wailsjs/go/mainApp/MainApp'
 
 const state: {
     appName: string
@@ -31,8 +31,6 @@ const state: {
 GetAppName().then((name) => {
     state.appName = name;
 })
-
-
 
 
 </script>

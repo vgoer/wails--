@@ -3,7 +3,8 @@ package main
 import (
 	"context"
 	"embed"
-	"my_test_pro/backend"
+	"my_test_pro/backend/configApp"
+	"my_test_pro/backend/mainApp"
 
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
@@ -18,11 +19,11 @@ var assets embed.FS
 
 func main() {
 	// Create an instance of the app structure
-	app := backend.NewMainApp()
+	app := mainApp.NewMainApp()
 
 	// Create application with options
 	err := wails.Run(&options.App{
-		Title:  backend.AppName,
+		Title:  configApp.AppName,
 		Width:  1024,
 		Height: 768,
 		// 无边框

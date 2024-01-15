@@ -1,8 +1,9 @@
-package backend
+package mainApp
 
 import (
 	"context"
 	"fmt"
+	"my_test_pro/backend/configApp"
 )
 
 // MainApp struct
@@ -28,5 +29,5 @@ func (a *MainApp) Greet(name string) string {
 
 // 获取name
 func (a *MainApp) GetAppName() string {
-	return AppName
+	return configApp.AppName
 }
