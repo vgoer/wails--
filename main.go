@@ -5,6 +5,7 @@ import (
 	"embed"
 	"my_test_pro/backend/configApp"
 	"my_test_pro/backend/mainApp"
+	"my_test_pro/backend/systemTp"
 
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
@@ -21,11 +22,15 @@ func main() {
 	// Create an instance of the app structure
 	app := mainApp.NewMainApp()
 
+	// 注册Tp
+	SystemTpApp := systemTp.NewSystemTp()
+
 	// Create application with options
 	err := wails.Run(&options.App{
 		Title:  configApp.AppName,
 		Width:  1024,
 		Height: 768,
+
 		// 无边框
 		Frameless: true,
 		AssetServer: &assetserver.Options{
@@ -34,9 +39,12 @@ func main() {
 		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
 		OnStartup: func(ctx context.Context) {
 			app.Startup(ctx)
+
+			SystemTpApp.Startup(ctx)
 		},
 		Bind: []interface{}{
 			app,
+			SystemTpApp,
 		},
 
 		Windows: &windows.Options{

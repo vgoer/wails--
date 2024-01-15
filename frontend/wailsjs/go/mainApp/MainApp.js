@@ -6,6 +6,10 @@ export function GetAppName() {
   return window['go']['mainApp']['MainApp']['GetAppName']();
 }
 
+export function GetNotify(arg1) {
+  return window['go']['mainApp']['MainApp']['GetNotify'](arg1);
+}
+
 export function Greet(arg1) {
   return window['go']['mainApp']['MainApp']['Greet'](arg1);
 }

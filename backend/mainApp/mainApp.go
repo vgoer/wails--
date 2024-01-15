@@ -2,6 +2,7 @@ package mainApp
 
 import (
 	"context"
+	_ "embed"
 	"fmt"
 	"my_test_pro/backend/configApp"
 )
@@ -30,4 +31,9 @@ func (a *MainApp) Greet(name string) string {
 // 获取name
 func (a *MainApp) GetAppName() string {
 	return configApp.AppName
+}
+
+// 通知
+func (a *MainApp) GetNotify(str string) string {
+	return str
 }
