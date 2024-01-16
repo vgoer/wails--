@@ -8,7 +8,7 @@ import (
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 
-// go:embed icon.ico
+// go:embed favicon.ico
 var icon []byte
 
 type SystemTp struct {

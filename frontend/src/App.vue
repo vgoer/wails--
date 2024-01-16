@@ -7,7 +7,7 @@
     <div class=" flex flex-col text-amber-50 h-screen">
         <Header class=" flex h-[40px] w-full items-center bg-gray-900/50" v-show="state.toggleHidden"></Header>
         <div class=" flex justify-center items-center h-full">
-              <el-button type="primary" @click="useHanld()" class=" bg-[#E94234] font-bold" color="#E94234">Primary</el-button>
+              <el-button type="primary" @click="useHanld()" class=" bg-[#E94234] font-bold" color="#E94234">点我</el-button>
         </div>
         <div class="relative  text-end">
             <el-icon 
@@ -43,8 +43,8 @@ const windowToggleAndTop = () => {
 
 const useHanld = () => {
     ElMessage({
-      message: 'test',
-      type: 'success',
+      message: '你个大傻春',
+      type: 'error',
     })
 }
 
